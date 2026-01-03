@@ -3,15 +3,15 @@ import { Check } from 'lucide-react';
 
 const Home = () => {
     const topics = [
-        { id: 1, icon: '⚡', title: 'Искусственный интеллект', preview: 'Поделюсь своим опытом длиною в год, перепробовал больш...', date: 'Ср', link: 'https://t.me/your_community_link/1' },
-        { id: 2, icon: '#', title: 'General', preview: 'Для получения заказа нужно показать этот QR-код в пункт...', date: 'Вт', link: 'https://t.me/your_community_link/2' },
-        { id: 3, icon: '🚮', title: 'Промты', preview: 'Фотография', date: '25.12.25', link: 'https://t.me/your_community_link/3' },
-        { id: 4, icon: '🔝', title: 'Тренды и новинки', preview: 'Не знаю, зачем делаю это бесплатно (видимо, моя прос...', date: '19.12.25', link: 'https://t.me/your_community_link/4' },
-        { id: 5, icon: '🧮', title: 'Таблички', preview: 'https://ecomunit.ru/wb', date: '18.12.25', link: 'https://t.me/your_community_link/5' },
-        { id: 6, icon: '🕰', title: 'Эфиры', preview: '🔥 Пост с зашкаливающим количеством пользы', date: '11.12.25', link: 'https://t.me/your_community_link/6' },
-        { id: 7, icon: '🟣', title: 'Wildberries', preview: 'Скриншот 03-12-2025 143207.jpg', date: '03.12.25', link: 'https://t.me/your_community_link/7' },
-        { id: 8, icon: '📘', title: 'Книги, статьи', preview: 'ССЫЛКИ ИЗ РОЛИКОВ • loldev();', date: '24.10.25', link: 'https://t.me/your_community_link/8' },
-        { id: 9, icon: '🌐', title: 'Блогеры', preview: 'Видео', date: '28.07.25', link: 'https://t.me/your_community_link/9' },
+        { id: 1, icon: '⚡', title: 'Искусственный интеллект', preview: 'Поделюсь своим опытом длиною в год, перепробовал больш...', date: 'Ср', link: 'https://t.me/Poleznoe755/10' },
+        { id: 2, icon: '#', title: 'General', preview: 'Для получения заказа нужно показать этот QR-код в пункт...', date: 'Вт', link: 'https://t.me/Poleznoe755/1' },
+        { id: 3, icon: '🚮', title: 'Промты', preview: 'Фотография', date: '25.12.25', link: 'https://t.me/Poleznoe755/603' },
+        { id: 4, icon: '🔝', title: 'Тренды и новинки', preview: 'Не знаю, зачем делаю это бесплатно (видимо, моя прос...', date: '19.12.25', link: 'https://t.me/Poleznoe755/11' },
+        { id: 5, icon: '🧮', title: 'Таблички', preview: 'https://ecomunit.ru/wb', date: '18.12.25', link: 'https://t.me/Poleznoe755/8' },
+        { id: 6, icon: '🕰', title: 'Эфиры', preview: '🔥 Пост с зашкаливающим количеством пользы', date: '11.12.25', link: 'https://t.me/Poleznoe755/7' },
+        { id: 7, icon: '🟣', title: 'Wildberries', preview: 'Скриншот 03-12-2025 143207.jpg', date: '03.12.25', link: 'https://t.me/Poleznoe755/3' },
+        { id: 8, icon: '📘', title: 'Книги, статьи', preview: 'ССЫЛКИ ИЗ РОЛИКОВ • loldev();', date: '24.10.25', link: 'https://t.me/Poleznoe755/14' },
+        { id: 9, icon: '🌐', title: 'Блогеры', preview: 'Видео', date: '28.07.25', link: 'https://t.me/Poleznoe755/26' },
     ];
 
     const handleTopicClick = (link) => {
