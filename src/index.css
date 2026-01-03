@@ -1,0 +1,230 @@
+:root {
+  --bg-color: #0f0f0f;
+  --card-bg: #1c1c1e;
+  --text-primary: #ffffff;
+  --text-secondary: #8e8e93;
+  --accent-color: #3b82f6;
+  /* Modern Blue */
+  --accent-gradient: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  --danger-color: #ff453a;
+  --success-color: #32d74b;
+
+  --font-family: 'Inter', sans-serif;
+
+  --safe-area-top: env(safe-area-inset-top);
+  --safe-area-bottom: env(safe-area-inset-bottom);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  line-height: 1.5;
+  overflow-x: hidden;
+  /* Telegram specific background adaptation if needed */
+  background-color: var(--tg-theme-bg-color, #0f0f0f);
+  color: var(--tg-theme-text-color, #ffffff);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  background: none;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* Utilities */
+.container {
+  padding: 16px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  letter-spacing: -0.5px;
+}
+
+.h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.card {
+  background: var(--tg-theme-secondary-bg-color, var(--card-bg));
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:active {
+  transform: scale(0.98);
+}
+
+.btn-primary {
+  background: var(--tg-theme-button-color, var(--accent-color));
+  color: var(--tg-theme-button-text-color, #ffffff);
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.2s;
+}
+
+.btn-primary:active {
+  opacity: 0.8;
+}
+
+/* Scrollbar hide */
+::-webkit-scrollbar {
+  display: none;
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--tg-theme-bg-color, rgba(15, 15, 15, 0.95));
+  /* Use dense opaque for safer contrast */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  justify-content: space-around;
+  padding: 12px 16px 32px 16px;
+  z-index: 100;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--text-secondary);
+  font-size: 11px;
+  gap: 5px;
+  transition: color 0.2s, transform 0.1s;
+}
+
+.nav-item:active {
+  transform: scale(0.9);
+}
+
+.nav-item.active {
+  color: var(--accent-color);
+}
+
+.page-content {
+  padding-bottom: 90px;
+  /* Space for bottom nav */
+  padding-top: 20px;
+  min-height: 100vh;
+
+  /* List View Styles */
+  .list-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .list-item {
+    display: flex;
+    padding: 10px 16px;
+    /* Matches standard list padding */
+    cursor: pointer;
+    transition: background-color 0.2s;
+    align-items: center;
+  }
+
+  .list-item:active {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+
+  .list-icon-wrapper {
+    width: 48px;
+    height: 48px;
+    margin-right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    flex-shrink: 0;
+  }
+
+  .avatar-placeholder {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .list-content {
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    /* Separator */
+    padding-bottom: 10px;
+    padding-top: 2px;
+    min-width: 0;
+    /* For truncation to work */
+  }
+
+  .list-item:last-child .list-content {
+    border-bottom: none;
+  }
+
+  .list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+  }
+
+  .list-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .list-date {
+    font-size: 12px;
+    color: var(--text-secondary);
+    white-space: nowrap;
+    margin-left: 8px;
+  }
+
+  .list-preview {
+    font-size: 14px;
+    color: var(--text-secondary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.3;
+  }
