@@ -33,8 +33,8 @@ const Home = () => {
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m15 18-6-6 6-6" /></svg>
                         </button>
                         <div>
-                            <h1 className="h1" style={{ fontSize: 20, margin: 0 }}>Полезное</h1>
-                            <p style={{ color: 'var(--text-secondary)', fontSize: 13, marginTop: 2 }}>1 участник</p>
+                            <h1 className="h1" style={{ fontSize: 20, margin: 0, color: '#ffffff' }}>Полезное</h1>
+                            <p style={{ color: 'rgba(255, 255, 255, 0.6)', fontSize: 13, marginTop: 2 }}>1 участник</p>
                         </div>
                     </div>
                     <div style={{ display: 'flex', gap: 16, color: 'white' }}>
