@@ -3,7 +3,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Videos from './pages/Videos';
 import About from './pages/About';
-import BottomNav from './components/BottomNav';
 
 function App() {
   useEffect(() => {
@@ -29,7 +28,6 @@ function App() {
           <Route path="/videos" element={<Videos />} />
           <Route path="/about" element={<About />} />
         </Routes>
-        <BottomNav />
       </div>
     </BrowserRouter>
   );
